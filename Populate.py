@@ -12,6 +12,7 @@ try:
         sys.stderr.write("This may cause Naomi to crash when reading files or configuration containing international characters.\n")
         sys.stderr.write("Please consider setting your system locale to UTF-8 (e.g. by setting LC_ALL=en_US.UTF-8 in Linux).\n")
 except Exception:
+    # Ignore any errors during encoding check so startup doesn't fail
     pass
 
 import naomi
